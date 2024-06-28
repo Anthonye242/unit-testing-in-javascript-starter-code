@@ -11,6 +11,8 @@ const add = (param1, param2) => {
     return param1 + param2;
   }
 
+  return String(param1) + String(param2);
+  
   // If neither condition is met, return a default value or an error message
   return "Invalid input";
 };
@@ -27,5 +29,12 @@ const unitTestExampleTwo = () => {
   console.log(add("Hello ", "world") === "Hello world" ? "Passed" : "Failed");
 };
 
+const unitTestExampleThree = () => {
+  // Test adding a number and a string
+  console.log('Test 3: Adding a number and a string (5 and " apples")');
+  console.log(add(5, " apples") === "5 apples" ? "Passed" : "Failed");
+};
+
 unitTestExampleOne();
 unitTestExampleTwo();
+unitTestExampleThree();
