@@ -5,16 +5,14 @@ const add = (param1, param2) => {
     return param1 + param2;
   }
 
-  //Check is both parameters are strings
+  // Check if both parameters are strings
   if (typeof param1 === "string" && typeof param2 === "string") {
     // Both are strings, so concatenate them
     return param1 + param2;
   }
 
+  // If parameters are of different data types, convert both to strings and concatenate them
   return String(param1) + String(param2);
-  
-  // If neither condition is met, return a default value or an error message
-  return "Invalid input";
 };
 
 const unitTestExampleOne = () => {
